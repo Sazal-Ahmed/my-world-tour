@@ -21,7 +21,7 @@ const Country = ({country , handleVisitedcountries, handleVisitedflags}) => {
             <p>Population: {population}</p>
             <p>Area: {area}</p>
             <p><small>Code :{cca3}</small></p>
-            <button onClick={()=> handleVisitedflags(flags)}>Add Flags</button>
+            <button onClick={()=> handleVisitedflags(flags)}>Add Flags</button><br />
             <button onClick={()=> handleVisitedcountries(country)}>Sazal Visited</button> <br />
             <button onClick={handleVisible}>{visible?'visited' : 'going'}</button>
             {

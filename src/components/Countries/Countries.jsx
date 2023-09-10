@@ -24,6 +24,8 @@ const Countries = () => {
         setVisitedflags(visitenewdFlags);
     }
 
+
+
     return (
         <div>
             <h3>Countries:{countries.length}</h3>
@@ -35,9 +37,9 @@ const Countries = () => {
                     }
                  </ul>
             </div>
-            <div>
+            <div className="flgs-container">
                 {
-                    visitedFlags.map(flags => <img src={flags.png}></img>)
+                    visitedFlags.map((flags, idx) => <img key={idx}  src={flags.png}></img>)
                 }
             </div>
 

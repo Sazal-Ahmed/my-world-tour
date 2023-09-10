@@ -6,3 +6,6 @@
 .visited{
     background-color: blueviolet;
 }
+.flgs-container img{
+    width: 100px;
+}
