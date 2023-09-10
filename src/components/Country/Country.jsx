@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import ('./Country.css');
-const Country = ({country}) => {
+const Country = ({country , handleVisitedcountries, handleVisitedflags}) => {
     console.log(country);
 
         const {name, flags, population , area, cca3
@@ -12,6 +12,7 @@ const Country = ({country}) => {
         const handleVisible = () => {
             setVisible(!visible);
         }
+
    
     return (
         <div className={`country ${visible && 'visited'}`}>
@@ -20,6 +21,8 @@ const Country = ({country}) => {
             <p>Population: {population}</p>
             <p>Area: {area}</p>
             <p><small>Code :{cca3}</small></p>
+            <button onClick={()=> handleVisitedflags(flags)}>Add Flags</button>
+            <button onClick={()=> handleVisitedcountries(country)}>Sazal Visited</button> <br />
             <button onClick={handleVisible}>{visible?'visited' : 'going'}</button>
             {
                 visible ? 'I am visited this country' : 'I want to visit'
